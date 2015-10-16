@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w0P-Wg-56a"/>
+                        <viewControllerLayoutGuide type="bottom" id="zvZ-jz-Ipx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minValue="0.0" maxValue="8000" translatesAutoresizingMaskIntoConstraints="NO" id="QP8-Ak-m3Y">
+                                <rect key="frame" x="18" y="72" width="284" height="31"/>
+                                <connections>
+                                    <action selector="HPFSliderChanged:" destination="2" eventType="valueChanged" id="2yL-32-ndd"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minValue="0.0" maxValue="8000" translatesAutoresizingMaskIntoConstraints="NO" id="wOF-p8-b2Q">
+                                <rect key="frame" x="18" y="134" width="284" height="31"/>
+                                <connections>
+                                    <action selector="LPFSliderChanged:" destination="2" eventType="valueChanged" id="SQk-Xu-LZ7"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minValue="0.0" maxValue="8000" translatesAutoresizingMaskIntoConstraints="NO" id="OHa-pk-IEP">
+                                <rect key="frame" x="18" y="192" width="284" height="31"/>
+                                <connections>
+                                    <action selector="BPFSliderChanged:" destination="2" eventType="valueChanged" id="LZy-Sh-rDr"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fv4-a2-Qqf">
+                                <rect key="frame" x="44" y="300" width="233" height="29"/>
+                                <segments>
+                                    <segment title="High Pass"/>
+                                    <segment title="Low Pass"/>
+                                    <segment title="Band Pass"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegmentControlAction:" destination="2" eventType="valueChanged" id="yeN-tm-QtQ"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeg-h4-xDB">
+                                <rect key="frame" x="145" y="467" width="30" height="30"/>
+                                <state key="normal" title="Go"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Automatic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxP-Ub-Q6j">
+                                <rect key="frame" x="121" y="443" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QP8-Ak-m3Y" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" id="7Hx-yb-uik"/>
+                            <constraint firstAttribute="trailing" secondItem="QP8-Ak-m3Y" secondAttribute="trailing" constant="20" symbolic="YES" id="VqG-uV-3SV"/>
+                            <constraint firstItem="QP8-Ak-m3Y" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="y0O-xF-2bD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SegmentControl" destination="fv4-a2-Qqf" id="HQs-w8-GSX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="364"/>
+        </scene>
+    </scenes>
+</document>
